@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<style>
-			* {
-   				box-sizing: border-box;
-				}
+<head>
+<style>
+* {
+  box-sizing: border-box;
+	}
                 
-			.header {
-            	border: 1px solid black;
-            	width:30%;
-  				float:left;
- 				}
+.header {
+	border: 1px solid black;
+  	width:30%;
+   	float:left;
+ }
                 
-    		.links {
-    			color:white;
-        		width:70%;
-                padding-bottom:50px;
-        		
-    		}
+.links {
+	width:70%;
+	padding-bottom:50px;
+ }
+ .title2 {
+	width:30%;
+	padding-bottom:100px;
+    float: left
+ }
+ 
+ .input{
+ 	width:30%;
+    float:left;
+ 	
+ }
 
 </style>
 </head>
@@ -25,19 +34,15 @@
 	
 	<div class="header"><img src="https://i.pinimg.com/736x/33/b8/69/33b869f90619e81763dbf1fccc896d8d--lion-logo-modern-logo.jpg" style="width:100px;height:70px;">My account 
 	 </div>
-     <div class="links">
-     	<links>
-       		<a href="url">link 1</a><br>
-     		<a href="url">link 2</a><br>
-     		<a href="url">link 3</a><br>     
-     </links></div>
+     <div class="links"><links><a href="url">link 1</a> <a href="url">link 2</a> <a href="url">link 3</a></links></div>
 	<hr>
     
-	<h1>Personal information</h1>
+	<div class="title2">Personal information</div>
+    
     <form action="/action_page.php">
-	First name:<br>
+	<div class="input">First name:<br>
 	<input type="text" name="firstname">
-	<br>
+	<br></div>
 	Last name:<br>
 	<input type="text" name="lastname">
 	<br>
@@ -49,12 +54,31 @@
 	<br>
     Language:<br>
 	<input type="text" name="firstname">
+	<br>
+    Photo:<br>
+	<input type="text" name="firstname">
 	<br><br>
 	<input type="submit">
 	</form>
 	<hr>
 
 	<h1>Billing information</h1>
+    <form action="/action_page.php">
+	Address:<br>
+	<input type="text" name="firstname">
+	<br>
+	Payment method:<br>
+	<input type="text" name="lastname">
+	<br>
+    Number:<br>
+	<input type="text" name="firstname">
+	<br>
+    Valid Thru:<br>
+	<input type="text" name="firstname">
+	<br>
+    Code:<br>
+	<input type="text" name="firstname">
+	<br><br>
 	<hr>
 	
 </body>
