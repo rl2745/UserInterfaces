@@ -22,6 +22,11 @@ img.logo {
     align:right;
 }
 
+img.profile{
+  width:80px;
+  height:80px;
+}
+
 input, select {
 	  width : 95%;
     height: 30px;
@@ -306,7 +311,7 @@ n.short3{
   <li><a class="active" href="#home"> <img class="logo" src="https://k61.kn3.net/3/2/1/C/9/4/493.png" alt="R_logo">  My account</a></li>
   <li><a class="option" href="#news">Home</a></li>
   <li><a class="option" href="#contact">Movies</a></li>
-  <li><a class="option" href="#about">TV shows</a></li>
+  <li><a class="option" href="#about">TV Shows</a></li>
 </ul>
 
     <div class="row">
@@ -319,7 +324,7 @@ n.short3{
     <form action="/action_page.php">
     <div class="col-4 col-m-6">
        First & Last name:<br><input type="text" name="firstname" placeholder="Mohamed Li" autofocus><br>
-        Birthday:<br><input type="date" name="birthday"><br>
+        Birthday:<br><input type="text" name="birthday" placeholder="mm/dd/yyyy"><br>
         Photo:<br><input type="text" name="photo_path" placeholder="C:\Users\..."><span class="material-icons">folder</span><br>
     </div>
 
@@ -399,7 +404,7 @@ n.short3{
   <option value="CY">Welsh</option>
   <option value="XH">Xhosa</option>
 </select><br>
-        <br><img src="https://cdn.pixabay.com/photo/2015/12/22/04/00/photo-1103596_1280.png" style="width:80px;height:80px;"><br>
+        <br><img class="profile" src="https://cdn.pixabay.com/photo/2015/12/22/04/00/photo-1103596_1280.png" alt="profile"><br>
 
    </div>
    </form>
