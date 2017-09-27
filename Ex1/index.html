@@ -10,18 +10,66 @@
 .row::after {
     content: "";
     clear: both;
-    display: table;
+
 }
 
-input, select{
-	  width : 200px;
+img.logo {
+
+    top: 0; bottom:0; left: 0; right:0;
+    margin: auto;
+    width:35px;height:35px;
+}
+
+input, select {
+	  width : 95%;
     height: 30px;
   	margin-top: 8px;
     margin-bottom: 20px;
     border-radius: 20px;
     border: 2px solid #4CAF50;
+    text-align: left;
+    color: #a6a6a6;
+    padding-left:10;
 
 }
+
+input.large, select.large{
+	  width : 90%;
+    height: 30px;
+  	margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 2px solid #4CAF50;
+}
+
+input.short1 {
+	  width : 45%;
+    height: 30px;
+  	margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 2px solid #4CAF50;
+}
+
+input.short2 {
+	  width : 15%;
+    height: 30px;
+  	margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 2px solid #4CAF50;
+}
+
+.material-icons {
+        float: right;
+        margin-right: 30px;
+        margin-top: -48px;
+        position: relative;
+        z-index: 2;
+        color:#666666;
+        font-size:26px;
+
+    }
 
  [class*="col-"] {
     float: left;
@@ -52,6 +100,11 @@ ul.topnav li a:hover:not(.active) {background-color: #111;}
 ul.topnav li a.active {background-color: #4CAF50;padding:9px;
 }
 
+div{
+background-color:#f2f2f2 ;
+
+}
+
 t2 {
 	color: #4CAF50;
   font-family:"Helvetica";
@@ -79,9 +132,36 @@ in {
 l{
 	padding: 20px;
   font-family:"Helvetica";
-  font-size:8px;
+  font-size:10px;
 
 }
+t{
+  font-family:"Helvetica";
+  font-size: 40px;
+  font-weight: bold;
+  position:relative;
+  bottom:-10;
+
+
+
+
+}
+
+n.short1 {
+  float: left;
+  width: 46%;
+}
+
+n.short2{
+  float:left;
+  width: 15%;
+}
+
+n.short3{
+  float:left;
+  width:31%;
+}
+
 
 .link {
 	color: white;
@@ -90,9 +170,10 @@ l{
 }
 
 .button {
-  display: inline-block;
+  float:right;
   padding: 15px 25px;
-  margin:20px;
+  margin-right:15%;
+  margin-bottom:5%;
   font-size: 14px;
   cursor: pointer;
   text-align: center;
@@ -172,7 +253,7 @@ l{
 
 
     <ul class="topnav">
-  <li><a class="active" href="#home"><img src="https://cdn0.iconfinder.com/data/icons/smile-emoticons/78/smyle_emoticons-07-256.png" style="width:35px;height:35px;padding-bottom:0px;">    My account</a></li>
+  <li><a class="active" href="#home"><img class="logo" src="https://cdn0.iconfinder.com/data/icons/smile-emoticons/78/smyle_emoticons-07-256.png">    My account</a></li>
   <li><a class="option" href="#news">Home</a></li>
   <li><a class="option" href="#contact">Movies</a></li>
   <li><a class="option" href="#about">Series</a></li>
@@ -187,13 +268,13 @@ l{
     <in>
     <form action="/action_page.php">
     <div class="col-4 col-m-6">
-       First & last name:<br><input type="text" name="firstname"><br>
-        Birthday:<br><input type="text" name="lastname"><br>
-        Photo:<br><input type="text" name="firstname"><span><i class="material-icons" style="font-size:24px;">folder</i></span><br>
+       First & last name:<br><input type="text" name="firstname" placeholder="Mohamed Li" autofocus><br>
+        Birthday:<br><input type="date" name="birthday"><br>
+        Photo:<br><input type="text" name="photo_path" placeholder="C:\Users\..."><span class="material-icons">folder</span><br>
     </div>
 
    <div class="col-4 col-m-6">
-        e-mail:<br><input type="text" name="firstname"><br>
+        Email:<br><input type="email" name="email" placeholder="example@uc3m.es"><br>
         Language:<br><select data-placeholder="Choose a Language...">
   <option value="AF">Afrikanns</option>
   <option value="SQ">Albanian</option>
@@ -268,7 +349,7 @@ l{
   <option value="CY">Welsh</option>
   <option value="XH">Xhosa</option>
 </select><br>
-        <br><img src="https://cdn.pixabay.com/photo/2015/12/22/04/00/photo-1103596_1280.png" style="width:50px;height:50px;"><br>
+        <br><img src="https://cdn.pixabay.com/photo/2015/12/22/04/00/photo-1103596_1280.png" style="width:80px;height:80px;"><br>
 
    </div>
    </form>
@@ -282,24 +363,22 @@ l{
 
     <in>
     <form action="/action_page.php">
-    <div class="col-4 col-m-6">
-        Address:<br><input type="text" name="firstname"><br>
-        Payment method:<br><select data-placeholder="Choose a payment method...">
-            <option value="AF">Credit card VISA</option>
-            <option value="AF">Credit card MASTERCARD</option>
-            </select>
-            <br>
-        Number:<br><input type="text" name="firstname">
-    </div>
-    <div class="col-4 col-m-6">
-        Valid Thru:<br><input type="text" name="firstname"><br>
-        Code:<br><input type="text" name="firstname"><br>
+    <div class="col-8 col-m-12">
+        Address:<br><input class="large" type="text" name="addr" placeholder="Avda. Universidad, 30. ZIP: 28911. Leganes, Madrid, Spain "><br>
+        Payment method:<br><select class="large" data-placeholder="Choose a payment method...">
+            <option value="VI">Credit card VISA</option>
+            <option value="MA">Credit card MASTERCARD</option>
+          </select><br>
+        <n class="short1">Number:</n><nclass="short2">Code:</n> <n class="short3">Valid Thru:</n><br>
+            <input class="short1" type="number" name="Number"  placeholder="1111 1111 1111 1111">
+            <input class="short2" type="number" name="VT1" maxlength="2"  placeholder="05"><t>/</t><input class="short2" type="numer" name="VT2" maxlength="2"  placeholder="25">
+            <input class="short2" type="number" name="Code" maxlength="3"  placeholder="123">
+            <p><button class="button">Submit</button></p>
     </div>
     </form>
 
     </in>
 
-     <p><button class="button">Submit</button></p>
 
 
     </div>
