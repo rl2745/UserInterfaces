@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>PE01-EX1-UI</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,6 +26,7 @@ img.logo {
 img.profile{
   width:80px;
   height:80px;
+  margin-top:-33px;margin-bottom: 33px; left: 0; right:0;
 }
 
 input, select {
@@ -82,8 +84,12 @@ input.short2 {
  [class*="col-"] {
     float: left;
     padding-left: 20px;
-    padding-top:0px;
-    padding-bottom:0px;
+    padding-top:10px;
+    padding-bottom:20px;
+    font-family:"Helvetica";
+    font-size:15px;
+    font-weight: bold;
+
 }
 
 body {margin: 0;}
@@ -124,24 +130,8 @@ h2 {
   font-family:"Helvetica";
   font-size:20px;
   font-weight: 900;
-
-
-
-
-
 }
 
-in {
-
-    padding-left:200px;
-    font-family:"Helvetica";
-    font-size:15px;
-    font-weight: bold;
-
-
-
-
-}
 
 p.l {
 	padding: 20px;
@@ -150,31 +140,34 @@ p.l {
   display: inline;
 
 }
-t{
+p.t{
   font-family:"Helvetica";
   font-size: 40px;
   font-weight: bold;
   position:relative;
   bottom:-10;
-
-
-
-
+  display: inline;
 }
 
-n.short1 {
+p.short1 {
   float: left;
   width: 46%;
+  margin:-5px;
+  display: inline;
 }
 
-n.short2{
+p.short2{
   float:left;
   width: 15%;
+  margin:-5px;
+  display: inline;
 }
 
-n.short3{
+p.short3{
   float:left;
   width:31%;
+  margin:-5px;
+  display: inline;
 }
 
 
@@ -216,6 +209,7 @@ n.short3{
     text-align: center;
     font-size: 12px;
     padding: 38px;
+    z-index: -2;
 
 }
 
@@ -320,7 +314,8 @@ n.short3{
     <div class="col-4 col-m-12">
         <h2>Personal Information</h2>
     </div>
-    <in>
+
+
     <form action="/action_page.php">
     <div class="col-4 col-m-6">
        First & Last name:<br><input type="text" name="firstname" placeholder="Mohamed Li" autofocus><br>
@@ -408,7 +403,7 @@ n.short3{
 
    </div>
    </form>
-    </in>
+
 
 	<hr>
 
@@ -417,28 +412,29 @@ n.short3{
        <h2>Billing Information</h2>
     </div>
 
-    <in>
+
     <form action="/action_page.php">
     <div class="col-8 col-m-12">
         Address:<br><input class="large" type="text" name="addr" placeholder="Avda. Universidad, 30. ZIP: 28911. Leganes, Madrid, Spain "><br>
         Payment method:<br><select class="large" data-placeholder="Choose a payment method...">
             <option value="VI">Credit Card VISA</option>
             <option value="MA">Credit Card MASTERCARD</option>
-          </select><br>
-        <n class="short1">Number:</n><n class="short3">Valid Thru:</n> <n class="short2">Code:</n><br>
+          </select>
+        <p class="short1">Number:</p><p class="short3">Valid Thru:</p> <p class="short2">Code:</p>
             <input class="short1" type="number" name="Number"  min="0" max="9999999999999999" placeholder="1111 1111 1111 1111">
-            <input class="short2" type="number" name="VT1" min="0" max="99" placeholder="05"><t>/</t><input class="short2" type="number" name="VT2" min="0" max="99"  placeholder="25">
-            <input class="short2" type="number" name="Code" min="0" max="999"  placeholder="123">
+            <input class="short2" type="number" name="VT1" min="0" max="99" placeholder="05"><p class="t">/</p><input class="short2" type="number" name="VT2" min="0" max="99"  placeholder="25">
+            <input class="short2" type="number" name="Code" min="0" max="999"  placeholder="123"><br>
             <p><button class="button">Submit</button></p>
     </div>
     </form>
 
-    </in>
+  <hr>
 
 
 
     </div>
     <div class="footer">
+      <br>
         <p class="l"><a class="link" href="#news">Copyright</a></p>
         <p class="l"><a class="link" href="#news">About Us</a></p>
         <p class="l"><a class="link" href="#news">Contact</a></p>
