@@ -11,13 +11,16 @@
     content: "";
     clear: both;
     display: table;
-}    
+}
 
 input, select{
-	width : 200px;
+	  width : 200px;
+    height: 30px;
   	margin-top: 8px;
     margin-bottom: 20px;
-    
+    border-radius: 20px;
+    border: 2px solid #4CAF50;
+
 }
 
  [class*="col-"] {
@@ -30,6 +33,9 @@ input, select{
 body {margin: 0;}
 ul.topnav {
     list-style-type: none;
+    font-family:"Helvetica";
+    font-size:20px;
+    font-weight: 900;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -48,19 +54,19 @@ ul.topnav li a.active {background-color: #4CAF50;padding:9px;
 
 t2 {
 	color: #4CAF50;
-   
- 
-   
-   
+
+
+
+
 
 }
 
 in {
-	
+
     padding-left:200px;
-   
-   
-  
+
+
+
 
 
 }
@@ -107,7 +113,7 @@ l{
     text-align: center;
     font-size: 12px;
     padding: 15px;
-    
+
 }
 
 /* For mobile phones: */
@@ -133,8 +139,8 @@ l{
     .col-m-12 {width: 100%;}
     ul.topnav li  {float: none;}
     ul.topnav li a.option {float: left;}
- 
-    
+
+
 }
 @media only screen and (min-width: 768px) {
     /* For desktop: */
@@ -151,23 +157,23 @@ l{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
     ul.topnav li {float: left;}
-    
+
 }
 </style>
 </head>
 <body>
-    
-  
+
+
     <ul class="topnav">
-  <li><a class="active" href="#home"><img src="https://cdn0.iconfinder.com/data/icons/smile-emoticons/78/smyle_emoticons-07-256.png" style="width:25px;height:25px;">My account</a></li>
+  <li><a class="active" href="#home"><img src="https://cdn0.iconfinder.com/data/icons/smile-emoticons/78/smyle_emoticons-07-256.png" style="width:35px;height:35px;padding-bottom:0px;">    My account</a></li>
   <li><a class="option" href="#news">Home</a></li>
   <li><a class="option" href="#contact">Movies</a></li>
   <li><a class="option" href="#about">Series</a></li>
 </ul>
-    
+
     <div class="row">
-    
-  
+
+
     <t2 class="col-4 col-m-12">
         <h2>Personal information</h2>
     </t2>
@@ -178,7 +184,7 @@ l{
         Birthday:<br><input type="text" name="lastname"><br>
         Photo:<br><input type="text" name="firstname"><span><i class="material-icons" style="font-size:24px;">folder</i></span><br>
     </div>
-    
+
    <div class="col-4 col-m-6">
         e-mail:<br><input type="text" name="firstname"><br>
         Language:<br><select data-placeholder="Choose a Language...">
@@ -256,11 +262,11 @@ l{
   <option value="XH">Xhosa</option>
 </select><br>
         <br><img src="https://cdn.pixabay.com/photo/2015/12/22/04/00/photo-1103596_1280.png" style="width:50px;height:50px;"><br>
-      
+
    </div>
    </form>
     </in>
-    
+
 	<hr>
 
     <t2 class="col-4 col-m-12">
@@ -271,27 +277,31 @@ l{
     <form action="/action_page.php">
     <div class="col-4 col-m-6">
         Address:<br><input type="text" name="firstname"><br>
-        Payment method:<br><input type="text" name="lastname"><br>
+        Payment method:<br><select data-placeholder="Choose a payment method...">
+            <option value="AF">Credit card VISA</option>
+            <option value="AF">Credit card MASTERCARD</option>
+            </select>
+            <br>
         Number:<br><input type="text" name="firstname">
     </div>
     <div class="col-4 col-m-6">
         Valid Thru:<br><input type="text" name="firstname"><br>
-        Code:<br><input type="text" name="firstname"><br>  
+        Code:<br><input type="text" name="firstname"><br>
     </div>
     </form>
-   
+
     </in>
-   
+
      <p><button class="button">Submit</button></p>
-    
+
 
     </div>
     <div class="footer">
-        <l><a class="link" href="#news">Copyright</a></l> 
+        <l><a class="link" href="#news">Copyright</a></l>
         <l><a class="link" href="#news">About us</a></l>
         <l><a class="link" href="#news">Contact</a></l>
     </div>
-    
+
 
 </body>
 </html>
