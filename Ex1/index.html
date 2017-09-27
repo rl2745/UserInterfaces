@@ -114,7 +114,7 @@ padding-top: 100px;
 
 }
 
-t2 {
+h2 {
 	color: #4CAF50;
   font-family:"Helvetica";
   font-size:20px;
@@ -138,10 +138,11 @@ in {
 
 }
 
-l{
+p.l {
 	padding: 20px;
   font-family:"Helvetica";
   font-size:10px;
+  display: inline;
 
 }
 t{
@@ -302,7 +303,7 @@ n.short3{
 
 
     <ul class="topnav">
-  <li><a class="active" href="#home"> <img class="logo" src="https://k61.kn3.net/3/2/1/C/9/4/493.png" alt="R_logo" border="0">  My account</a></li>
+  <li><a class="active" href="#home"> <img class="logo" src="https://k61.kn3.net/3/2/1/C/9/4/493.png" alt="R_logo">  My account</a></li>
   <li><a class="option" href="#news">Home</a></li>
   <li><a class="option" href="#contact">Movies</a></li>
   <li><a class="option" href="#about">TV shows</a></li>
@@ -311,9 +312,9 @@ n.short3{
     <div class="row">
 
 
-    <t2 class="col-4 col-m-12">
+    <div class="col-4 col-m-12">
         <h2>Personal Information</h2>
-    </t2>
+    </div>
     <in>
     <form action="/action_page.php">
     <div class="col-4 col-m-6">
@@ -406,9 +407,10 @@ n.short3{
 
 	<hr>
 
-    <t2 class="col-4 col-m-12">
+
+    <div class="col-4 col-m-12">
        <h2>Billing Information</h2>
-    </t2>
+    </div>
 
     <in>
     <form action="/action_page.php">
@@ -418,10 +420,10 @@ n.short3{
             <option value="VI">Credit Card VISA</option>
             <option value="MA">Credit Card MASTERCARD</option>
           </select><br>
-        <n class="short1">Number:</n><nclass="short2">Code:</n> <n class="short3">Valid Thru:</n><br>
-            <input class="short1" type="number" name="Number"  placeholder="1111 1111 1111 1111">
-            <input class="short2" type="number" name="VT1" maxlength="2"  placeholder="05"><t>/</t><input class="short2" type="numer" name="VT2" maxlength="2"  placeholder="25">
-            <input class="short2" type="number" name="Code" maxlength="3"  placeholder="123">
+        <n class="short1">Number:</n><n class="short3">Valid Thru:</n> <n class="short2">Code:</n><br>
+            <input class="short1" type="number" name="Number"  min="0" max="9999999999999999" placeholder="1111 1111 1111 1111">
+            <input class="short2" type="number" name="VT1" min="0" max="99" placeholder="05"><t>/</t><input class="short2" type="number" name="VT2" min="0" max="99"  placeholder="25">
+            <input class="short2" type="number" name="Code" min="0" max="999"  placeholder="123">
             <p><button class="button">Submit</button></p>
     </div>
     </form>
@@ -432,9 +434,9 @@ n.short3{
 
     </div>
     <div class="footer">
-        <l><a class="link" href="#news">Copyright</a></l>
-        <l><a class="link" href="#news">About Us</a></l>
-        <l><a class="link" href="#news">Contact</a></l>
+        <p class="l"><a class="link" href="#news">Copyright</a></p>
+        <p class="l"><a class="link" href="#news">About Us</a></p>
+        <p class="l"><a class="link" href="#news">Contact</a></p>
         <br><br>
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
