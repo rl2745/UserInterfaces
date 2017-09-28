@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PE01-EX1-UI</title>
+  <title>PE01-EX2-UI</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,6 +31,29 @@ img.pic {
     padding-left: 5px;
     width:80px;height:56px;
     align:right;
+}
+
+img.icon {
+  position: relative;
+    top: 0; margin-top:0px; left: 0; right:0;
+    margin: auto;
+    width:30px; height:30px;
+    float:left;
+}
+
+img.info {
+  position: relative;
+    top: -10px; margin-top:0px; margin-bottom: 20px; left: 0; right:0;
+    margin: auto;
+    width:25px; height:25px;
+    float:right;
+}
+
+img.vid {
+	width:220px;
+	height:180px;
+
+
 }
 
 img.profile{
@@ -90,6 +113,17 @@ input.short2 {
         z-index: 1;
 
     }
+
+.vid-with-text {
+    text-align: justify;
+    background: silver; 
+    width: 250px;
+}
+
+.vid-with-text img {
+    display: block;
+    margin: 0 auto;
+}
 
  [class*="col-"] {
     float: left;
@@ -257,6 +291,14 @@ p.short3{
   color: white;
 }
 
+#wrap {
+	display:block;
+	position:relative; 
+    width: 256px; 
+    background: silver;  
+    border: 0px;
+
+   }
 
 /* For mobile phones: */
 @media only screen and (max-width: 600px) {
@@ -343,9 +385,9 @@ p.short3{
     <form action="/action_page.php">
     <div class="col-2 col-m-4">
 
-    	<br><img class="logo" src="https://maxcdn.icons8.com/iOS7/PNG/512/Security/like_it-512.png" alt="like"> 1,230,342 Likes<br>
-    	<br><img class="logo" src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//share1600.png" alt="share"> 3,429 Shares<br>
-        <br><br>Description:<p>Bourne (Matt Damon) catches up to Desh (Joey Ansah) who is chasing Nicky (Julia Stiles) and the two fight to the death.<p/><br>
+    	<br><img class="icon" src="https://maxcdn.icons8.com/iOS7/PNG/512/Security/like_it-512.png" alt="like"> 1,230,342 Likes<br>
+    	<br><img class="icon" src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//share1600.png" alt="share"> 3,429 Shares<br>
+        <br><br>Description:<p>Bourne (Matt Damon) catches up to Desh (Joey Ansah) who is chasing Nicky (Julia Stiles) and the two fight to the death.</p><br>
 
     </div>
 
@@ -365,12 +407,32 @@ p.short3{
 
 
     <form action="/action_page.php">
-    <div class="col-8 col-m-12">
-        <br><iframe width="256" height="192" src="https://www.youtube.com/embed/LOVgTjeg4fY" frameborder="0" allowfullscreen></iframe>
-        <iframe width="256" height="192" src="https://www.youtube.com/embed/UFnmq5PPScA" frameborder="0" allowfullscreen></iframe>
-        <iframe width="256" height="192" src="https://www.youtube.com/embed/DUd5RPVDjPY" frameborder="0" allowfullscreen></iframe><br>
+    <div class="col-2 col-m-4">
+       
 
+        <div class="vid-with-text">
+   			<img width="240" height="192" src="https://static.highsnobiety.com/wp-content/uploads/2016/02/08123852/jason-bourne-first-look-trailer-00-0.jpg" alt="BourneVid" />
+    		<p>Desh Makes a Kill <img class="info" src="https://cdn1.iconfinder.com/data/icons/ie_Bright/512/plus_add_green.png" alt="info"> </p>
+		</div>
+    	
     </div>
+
+	<div class="col-4 col-m-6">
+    	<div class="vid-with-text">
+   			<img width="240" height="192" src="https://ichef-1.bbci.co.uk/news/660/cpsprodpb/16928/production/_89365429_2465_fpt_00050rv2_crop.jpg" alt="BourneVid" />
+    		<p>Firing Grounds <img class="info" src="https://cdn1.iconfinder.com/data/icons/ie_Bright/512/plus_add_green.png" alt="info"> </p>
+		</div>
+
+	</div>
+
+	<div class="col-8 col-m-8">
+		<div class="vid-with-text">
+   			<img width="240" height="192" src="https://s.yimg.com/ny/api/res/1.2/JROTP4ypmUy8vXQ1rz2YNg--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/digital_trends_973/723a913796bd557efbf682b3b5869d17" alt="BourneVid" />
+    		<p>Running From the Enemy <img class="info" src="https://cdn1.iconfinder.com/data/icons/ie_Bright/512/plus_add_green.png" alt="info"> </p>
+		</div>
+
+	</div>
+
     </form>
 
   <hr>
