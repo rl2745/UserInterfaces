@@ -23,16 +23,6 @@ img.logo {
     align:right;
 }
 
-img.pic {
-  position: relative;
-    top: 0; margin-top:0px; left: 0; right:0;
-    margin: auto;
-    padding-top: 5px;
-    padding-left: 5px;
-    width:80px;height:56px;
-    align:right;
-}
-
 img.profile{
   width:80px;
   height:80px;
@@ -127,10 +117,6 @@ ul.topnav li a {
 }
 ul.topnav li a:hover:not(.active) {background-color: #111;}
 ul.topnav li a.active {background-color: #4CAF50;padding:9px;
-}
-
-ul.topnav li a:hover:not(.profile) {background-color: #111;}
-ul.topnav li a.profile {background-color: #4CAF50;padding:9px;
 }
 
 div{
@@ -311,45 +297,38 @@ p.short3{
 
 }
 </style>
-
-
-
-
 </head>
-
-
-
 <body>
 
 
-	<ul class="topnav">
-  <li><a class="active" href="#home"> <img class="logo" src="https://k61.kn3.net/3/2/1/C/9/4/493.png" alt="R_logo"> Santiago's Account</a></li>
-  <li><img class="pic" src="http://cdn2us.denofgeek.com/sites/denofgeekus/files/2017/02/santiago-cabrera-dexter.jpg" alt="pic"></li>
+    <ul class="topnav">
+  <li><a class="active" href="#home"> <img class="logo" src="https://k61.kn3.net/3/2/1/C/9/4/493.png" alt="R_logo">  Santiago's Account</a></li>
   <li><a class="option" href="#news">Home</a></li>
   <li><a class="option" href="#contact">Movies</a></li>
   <li><a class="option" href="#about">TV Shows</a></li>
-  
-
 </ul>
 
     <div class="row">
 
 
     <div class="col-4 col-m-12">
-        <h2>The Bourne Ultimatum</h2>
+        <h2>Personal Information</h2>
     </div>
 
 
     <form action="/action_page.php">
     <div class="col-4 col-m-6">
-
-    	<br><img class="logo" src="https://maxcdn.icons8.com/iOS7/PNG/512/Security/like_it-512.png" alt="like"> 1,230,342 Likes<br>
-    	<br><img class="logo" src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//share1600.png" alt="share"> 3,429 Shares<br>
-        <br>Description:<p>Bourne (Matt Damon) catches up to Desh (Joey Ansah) who is chasing Nicky (Julia Stiles) and the two fight to the death.<p/>
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/uLt7lXDCHQ0" frameborder="0" allowfullscreen></iframe>
+       First & Last name:<br><input type="text" name="firstname" placeholder="Mohamed Li" autofocus><br>
+        Birthday:<br><input type="text" name="birthday" placeholder="mm/dd/yyyy"><br>
+        Photo:<br><input type="text" name="photo_path" placeholder="C:\Users\..."><span class="material-icons">folder</span><br>
     </div>
 
+   <div class="col-4 col-m-6">
+        Email:<br><input type="email" name="email" placeholder="example@uc3m.es"><br>
+        <br>
+        <br><img class="profile" src="https://cdn.pixabay.com/photo/2015/12/22/04/00/photo-1103596_1280.png" alt="profile"><br>
+
+   </div>
    </form>
 
 
@@ -357,7 +336,7 @@ p.short3{
 
 
     <div class="col-4 col-m-12">
-       <h2>Other Videos</h2>
+       <h2>Billing Information</h2>
     </div>
 
 
