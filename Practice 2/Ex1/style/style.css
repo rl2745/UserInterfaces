@@ -47,7 +47,9 @@ ul.topnav li a.active {background-color: #4CAF50;padding:9px;
 }
 
 /*Body*/
-body {margin: 0;}
+body {
+  margin: 0;
+  background-color:#f2f2f2 ;}
 
 img.logo {
   position: relative;
@@ -116,6 +118,7 @@ input.checkterms {
   width : 30px;
   height: 30px;
   padding-top:20;
+  float: none;
 
 
 }
@@ -132,8 +135,7 @@ input.checkterms {
     }
 
 div{
-  background-color:#f2f2f2 ;
-  padding-top: 100px;
+
 }
 
 h2 {
@@ -162,22 +164,25 @@ p.t{
 
 p.short1 {
   float: left;
-  width: 46%;
-  margin:-5px;
+  width : 45%;
+  margin:-7;
+  margin-left:5;
   display: inline;
 }
 
 p.short2{
   float:left;
-  width: 15%;
-  margin:-5px;
+  width : 15%;
+  margin:-7;
+  margin-left:17;
   display: inline;
 }
 
 p.short3{
   float:left;
-  width:31%;
-  margin:-5px;
+  width : 30%;
+  margin:-7;
+  margin-left:13;
   display: inline;
 }
 
@@ -185,11 +190,11 @@ p.short3{
 /*Submit button*/
 
 .button {
-  float:right;
-  width:25%;
+  width:20%;
   height: 60px;
-  margin-right:15%;
-  margin-bottom:5%;
+  margin-right:10%;
+  margin-bottom:30;
+  padding: auto;
   font-size: 17px;
   cursor: pointer;
   text-align: center;
@@ -213,6 +218,8 @@ p.short3{
 
 .hidden {
     display: none;
+    margin-top:6;
+    margin-bottom: 30;
 }
 
 /*Footer*/
@@ -272,7 +279,7 @@ p.short3{
     width: 100%;
     }
     ul.topnav li {float: none;}
-    div{
+    .row{
     padding-top: 280px;
     }
 }
@@ -292,7 +299,7 @@ p.short3{
     .col-m-12 {width: 100%;}
     ul.topnav li  {float: none;}
     ul.topnav li a.option {float: left;}
-    div{
+    .row {
     padding-top: 130px;
     }
 
@@ -313,7 +320,7 @@ p.short3{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
     ul.topnav li {float: left;}
-    div{
+    .row {
     padding-top: 80px;
     }
 

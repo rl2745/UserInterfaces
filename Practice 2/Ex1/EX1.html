@@ -10,15 +10,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $('[class^=is]').hide();
 
   $("#pmethod").change(function(){
       var value = $("#pmethod option:selected").val();
       var theDiv = $(".is" + value);
 
       theDiv.slideDown();
-      theDiv.siblings('[class^=is]').slideUp();
+      theDiv.siblings('[class*=is]').slideUp(function() { $(this).addClass("hidden"); });
   });
+
+  $("#c").click(function(){
+    $('[class*=is]').slideUp(function() { $(this).addClass("hidden"); });
+  });
+
 });
 </script>
 </head>
@@ -42,7 +46,7 @@ $(document).ready(function(){
 
   <form action="/action_page.php">
   <div class="col-8 col-m-12">
-      User Name:<br><input class="large" type="text" name="addr" placeholder="PopCorn15" value="" required><br>
+      User Name:<br><input class="large" type="text" name="addr" placeholder="PopCorn15" value="" autofocus required><br>
       Password:<br><input class="large" type="password" value="" required>
   </div>
 
@@ -57,7 +61,7 @@ $(document).ready(function(){
 
 
     <div class="col-4 col-m-6">
-       First & Last name:<br><input type="text" name="firstname" placeholder="Mohamed Li" value="" autofocus required><br>
+       First & Last name:<br><input type="text" name="firstname" placeholder="Mohamed Li" value="" required><br>
         Birthday:<br><input type="text" name="birthday" placeholder="mm/dd/yyyy" value="" required><br>
         Photo:<br><input type="text" name="photo_path" placeholder="C:\Users\..." value=""><span class="material-icons">folder</span><br>
     </div>
@@ -163,12 +167,13 @@ $(document).ready(function(){
             <option value="PA">PayPal</option>
             <option value="BT">Bank Transfer</option>
           </select>
+
         <div class="hidden isCC">
             <p class="short1">Number:</p><p class="short3">Valid Thru:</p> <p class="short2">Code:</p>
             <input class="short1" type="number" name="Number"  min="0" max="9999999999999999" placeholder="1111 1111 1111 1111" value="">
             <input class="short2" type="number" name="VT1" min="0" max="99" placeholder="05" value=""><p class="t">/</p><input class="short2" type="number" name="VT2" min="0" max="99"  placeholder="25" value="">
             <input class="short2" type="number" name="Code" min="0" max="999"  placeholder="123" value=""><br>
-        </div>
+          </div>
 
         <div class="hidden isPA">
             <p>PAYPAL</p>
@@ -177,9 +182,11 @@ $(document).ready(function(){
         <div class="hidden isBT">
           <p>BankTransfer</p>
         </div>
+    </div>
 
+    <div class="col-12 col-m-12">
       <input class="checkterms" type="checkbox" name="termsandcookies" value="Terms" required>I have read and agree to terms of use, privacy policy and use of cookies<br>
-      <p><input class="button" type="submit" value="Save"><input class="button" type="reset" value="Cancel"></p>
+      <p><input class="button" type="submit" value="Save"><input class="button" type="reset" value="Cancel" id="c"></p>
     </div>
     </form>
 
