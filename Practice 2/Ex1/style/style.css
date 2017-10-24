@@ -211,6 +211,10 @@ p.short3{
   transform: translateY(4px);
 }
 
+.hidden {
+    display: none;
+}
+
 /*Footer*/
 .footer {
 	list-style-type: none;

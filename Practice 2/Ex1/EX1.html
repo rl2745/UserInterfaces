@@ -6,6 +6,21 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./style/style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('[class^=is]').hide();
+
+  $("#pmethod").change(function(){
+      var value = $("#pmethod option:selected").val();
+      var theDiv = $(".is" + value);
+
+      theDiv.slideDown();
+      theDiv.siblings('[class^=is]').slideUp();
+  });
+});
+</script>
 </head>
 <body>
 
@@ -30,7 +45,7 @@
       User Name:<br><input class="large" type="text" name="addr" placeholder="PopCorn15" value="" required><br>
       Password:<br><input class="large" type="password" value="" required>
   </div>
-  </form>
+
 
 <hr>
 
@@ -40,7 +55,7 @@
     </div>
 
 
-    <form action="/action_page.php">
+
     <div class="col-4 col-m-6">
        First & Last name:<br><input type="text" name="firstname" placeholder="Mohamed Li" value="" autofocus required><br>
         Birthday:<br><input type="text" name="birthday" placeholder="mm/dd/yyyy" value="" required><br>
@@ -50,6 +65,8 @@
    <div class="col-4 col-m-6">
         Email:<br><input type="email" readonly name="email" placeholder="example@uc3m.es" value="" required><br>
         Language:<br><select data-placeholder="Choose a Language..." value="">
+            <option value="" disabled selected hidden>Choose a Language...</option>
+            <option value="AF">Afrikanns</option>
             <option value="AF">Afrikanns</option>
             <option value="SQ">Albanian</option>
             <option value="AR">Arabic</option>
@@ -126,7 +143,7 @@
         <br><img class="profile" src="./images/profile_pic.png" alt="profile"><br>
 
    </div>
-   </form>
+
 
 
 	<hr>
@@ -137,18 +154,31 @@
     </div>
 
 
-    <form action="/action_page.php">
+
     <div class="col-8 col-m-12">
         Address:<br><input class="large" type="text" name="addr" placeholder="Avda. Universidad, 30. ZIP: 28911. Leganes, Madrid, Spain" value="" required><br>
-        Payment Method:<br><select class="large" data-placeholder="Choose a payment method..." value="" required>
-            <option value="VI">Credit Card VISA</option>
-            <option value="MA">Credit Card MASTERCARD</option>
+        Payment Method:<br><select class="large" id="pmethod" data-placeholder="Choose a payment method..." value="" required>
+            <option value="" disabled selected hidden>Choose a payment method...</option>
+            <option value="CC">Credit Card</option>
+            <option value="PA">PayPal</option>
+            <option value="BT">Bank Transfer</option>
           </select>
-        <p class="short1">Number:</p><p class="short3">Valid Thru:</p> <p class="short2">Code:</p>
+        <div class="hidden isCC">
+            <p class="short1">Number:</p><p class="short3">Valid Thru:</p> <p class="short2">Code:</p>
             <input class="short1" type="number" name="Number"  min="0" max="9999999999999999" placeholder="1111 1111 1111 1111" value="">
             <input class="short2" type="number" name="VT1" min="0" max="99" placeholder="05" value=""><p class="t">/</p><input class="short2" type="number" name="VT2" min="0" max="99"  placeholder="25" value="">
             <input class="short2" type="number" name="Code" min="0" max="999"  placeholder="123" value=""><br>
-      <input class="checkterms" type="checkbox" name="termsandcookies" value="Terms">I have read and agree to terms of use, privacy policy and use of cookies<br>
+        </div>
+
+        <div class="hidden isPA">
+            <p>PAYPAL</p>
+        </div>
+
+        <div class="hidden isBT">
+          <p>BankTransfer</p>
+        </div>
+
+      <input class="checkterms" type="checkbox" name="termsandcookies" value="Terms" required>I have read and agree to terms of use, privacy policy and use of cookies<br>
       <p><input class="button" type="submit" value="Save"><input class="button" type="reset" value="Cancel"></p>
     </div>
     </form>
