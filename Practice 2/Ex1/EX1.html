@@ -176,27 +176,29 @@ $(document).ready(function(){
           </div>
 
         <div class="hidden isPA">
-            <p>PAYPAL</p>
+            <p>
+              <a href="https://www.paypal.com/signin?country.x=US&locale.x=en_US"><image border="0" alt="Paypal" src="./images/paypal.png"></a>
+            </p>
         </div>
 
         <div class="hidden isBT">
-          <p>BankTransfer</p>
+          Bank account Holder Name:<br><input class="large" type="text" name="accountholder" value=""><br>
+          Bank Account Number:<br><input class="large" type="number" name="acountnumber" value=""><br>
+          Bank Name:<br><input class="large" type="text" name="bankname" value=""><br>
         </div>
     </div>
 
-    <div class="col-12 col-m-12">
-      <input class="checkterms" type="checkbox" name="termsandcookies" value="Terms" required>I have read and agree to terms of use, privacy policy and use of cookies<br>
+    <div class="endsubmit col-12 col-m-12">
+      <input type="checkbox" name="termsandcookies" value="Terms" required><p>I have read and agree to terms of use, privacy policy and use of cookies</p>
       <p><input class="button" type="submit" value="Save"><input class="button" type="reset" value="Cancel" id="c"></p>
     </div>
     </form>
-
-  <hr>
 
 
 
   <!-- Footer -->
     </div>
-    <div class="footer">
+    <div class="footer col-12 col-m-12">
       <br>
         <p class="l"><a class="link" href="#news">Copyright</a></p><p class="l">|</p>
         <p class="l"><a class="link" href="#news">About Us</a></p><p class="l">|</p>

@@ -112,17 +112,6 @@ input.short2 {
     border: 2px solid #4CAF50;
 }
 
-input.checkterms {
-  margin-left:5%;
-  margin-right:10px;
-  width : 30px;
-  height: 30px;
-  padding-top:20;
-  float: none;
-
-
-}
-
 .material-icons {
         float: right;
         margin-right: 30px;
@@ -133,10 +122,6 @@ input.checkterms {
         font-size:26px;
         z-index: 1;
     }
-
-div{
-
-}
 
 h2 {
 	color: #4CAF50;
@@ -153,6 +138,13 @@ p.l {
   display: inline;
 
 }
+
+.hidden {
+    display: none;
+    margin-top:6;
+    margin-bottom: 30;
+}
+
 p.t{
   font-family:"Helvetica";
   font-size: 40px;
@@ -186,14 +178,28 @@ p.short3{
   display: inline;
 }
 
+.endsubmit {
+text-align: center;
+
+}
+
+
+input[name="termsandcookies"] {
+margin:0;
+}
+
+
 
 /*Submit button*/
+
 
 .button {
   width:20%;
   height: 60px;
-  margin-right:10%;
-  margin-bottom:30;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top:50;
+  margin-bottom:30 ;
   padding: auto;
   font-size: 17px;
   cursor: pointer;
@@ -216,11 +222,19 @@ p.short3{
   transform: translateY(4px);
 }
 
-.hidden {
-    display: none;
-    margin-top:6;
-    margin-bottom: 30;
+#c {
+  background-color: #cc0000;
 }
+
+#c:hover{
+  background-color: #800000;
+}
+
+#c:active {
+  background-color: #800000;
+}
+
+
 
 /*Footer*/
 .footer {
