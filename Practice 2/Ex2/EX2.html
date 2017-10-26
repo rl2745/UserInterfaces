@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PE01-EX2-UI</title>
+  <title>PE02-EX2-UI</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,6 +11,12 @@
 <script>
 $(document).ready(function(){
 
+
+   var likesCount = 1230342;
+   var sharesCount = 3429;
+   document.getElementById("likesCount").innerHTML = likesCount;
+   document.getElementById("sharesCount").innerHTML = sharesCount;
+
   $("#pmethod").change(function(){
       var value = $("#pmethod option:selected").val();
       var theDiv = $(".is" + value);
@@ -19,8 +25,14 @@ $(document).ready(function(){
       theDiv.siblings('[class*=is]').slideUp(function() { $(this).addClass("hidden"); });
   });
 
-  $("#c").click(function(){
-    $('[class*=is]').slideUp(function() { $(this).addClass("hidden"); });
+  $("#counterLike").click(function(){
+      likesCount++;
+      document.getElementById("likesCount").innerHTML = likesCount;
+  });
+
+  $("#counterShare").click(function(){
+      sharesCount++;
+      document.getElementById("sharesCount").innerHTML = sharesCount;
   });
 
 });
@@ -57,8 +69,14 @@ $(document).ready(function(){
     <form action="/action_page.php">
     <div class="col-2 col-m-4">
 
-    	<br><img class="icon" src="./images/like.png" alt="like"> 1,230,342 Likes<br>
-    	<br><img class="icon" src="./images/share.png" alt="share"> 3,429 Shares<br>
+    	<br><img class="icon" src="./images/like.png" alt="like" id="counterLike">
+         <p id="likesCount"></p>
+            <p> Likes</p>
+
+    	<br><img class="icon" src="./images/share.png" alt="share" id="counterShare">
+         <p id="sharesCount"></p>
+            <p> Shares</p>
+
         <br><br>Description:<p>Bourne (Matt Damon) catches up to Desh (Joey Ansah) who is chasing Nicky (Julia Stiles) and the two fight to the death.</p><br>
 
     </div>
@@ -106,7 +124,7 @@ $(document).ready(function(){
 	  </div>
 
     </form>
-    
+
   <hr>
 
     </div>
