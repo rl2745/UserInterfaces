@@ -96,4 +96,37 @@ $("#ok").click(function(){
       $("#FiringGroundsDesc").dialog("open");
    });
 
+  $("#RunningDesc").dialog({
+    autoOpen: false,
+    show: {
+        effect: "blind",
+        duration: 1000
+    },
+    hide: {
+        effect: "blind",
+        duration: 1000
+    }
+    
+});
+
+  $("#RunningOpener").click(function () {
+      $("#RunningDesc").dialog("open");
+   });
+
+  $("#DeshDesc").dialog({
+    autoOpen: false,
+    show: {
+        effect: "blind",
+        duration: 1000
+    },
+    hide: {
+        effect: "blind",
+        duration: 1000
+    }
+    
+});
+
+  $("#DeshOpener").click(function () {
+      $("#DeshDesc").dialog("open");
+   });
 });
