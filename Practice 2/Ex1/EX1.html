@@ -8,178 +8,7 @@
 <link rel="stylesheet" href="./style/style.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-
-  $("#pmethod").change(function(){
-      var value = $("#pmethod option:selected").val();
-      var theDiv = $(".is" + value);
-
-      theDiv.slideDown();
-      theDiv.siblings('[class*=is]').slideUp(function() { $(this).addClass("hidden"); });
-  });
-
-  $("#c").click(function(){
-    $('[class*=is]').slideUp(function() { $(this).addClass("hidden"); });
-  });
-
-  function setCookie(cname,cvalue,exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
-function checkCookies() {
-  //$('.dialog-form').show();
-    var email=getCookie("email");
-    var emailv = document.getElementById( "emailv" ).value;
-    var password=getCookie("password");
-    var passwordv = document.getElementById( "passwordv" ).value;
-    var user=getCookie("user");
-    var flname=getCookie("flname");
-    var bday=getCookie("bday");
-    var photo=getCookie("photo");
-    var lang=getCookie("lang");
-    var addr=getCookie("addr");
-    var pay=getCookie("pmethod");
-    var ccnum=getCookie("ccnum");
-    var vt1=getCookie("vt1");
-    var vt2=getCookie("vt2");
-    var cccode=getCookie("cccode");
-    var bthname=getCookie("bthname");
-    var btnum=getCookie("btnum");
-    var btname=getCookie("btname");
-
-
-    if (email != "" && email==emailv) {
-        $("#email").val(email);
-        $("#password").val(password);
-        $("#user").val(user);
-        $("#flname").val(flname);
-        $("#bday").val(bday);
-        $("#photo").val(photo);
-        $("#lang").val(lang);
-        $("#addr").val(addr);
-        $("#pmethod").val(pmethod);
-        $("#ccnum").val(ccnum);
-        $("#vt1").val(vt1);
-        $("#vt2").val(vt2);
-        $("#cccode").val(cccode);
-        $("#bthname").val(bthname);
-        $("#btnum").val(btnum);
-        $("#btname").val(btname);
-    } else {
-      $("#email").val(emailv);
-      $("#password").val(passwordv);
-    }
-}
-
-
-
-$("#sm").click(function(){
-
-  var email = document.getElementById( "email" ).value;
-  if (email != "" && email != null) {
-      setCookie("email", email, 30);
-  }
-  var password = document.getElementById( "password" ).value;
-  if (password != "" && password != null) {
-      setCookie("password", password, 30);
-  }
-  var user = document.getElementById( "user" ).value;
-  if (user != "" && user != null) {
-      setCookie("user", user, 30);
-  }
-  var flname = document.getElementById( "flname" ).value;
-  if (flname != "" && flname != null) {
-      setCookie("flname", flname, 30);
-  }
-  var bday = document.getElementById( "bday" ).value;
-  if (bday != "" && bday != null) {
-      setCookie("bday", bday, 30);
-  }
-  var photo = document.getElementById( "photo" ).value;
-  if (photo != "" && photo != null) {
-      setCookie("photo", photo, 30);
-  }
-  var lang = document.getElementById( "lang" ).value;
-  if (lang != "" && lang != null) {
-      setCookie("lang", lang, 30);
-  }
-  var addr = document.getElementById( "addr" ).value;
-  if (addr != "" && addr != null) {
-      setCookie("addr", addr, 30);
-  }
-  var pmethod = document.getElementById( "pmethod" ).value;
-  if (pmethod != "" && pmethod != null) {
-      setCookie("pmethod", pmethod, 30);
-  }
-  var ccnum = document.getElementById( "ccnum" ).value;
-  if (ccnum != "" && ccnum != null) {
-      setCookie("ccnum", ccnum, 30);
-  }
-  var vt1 = document.getElementById( "vt1" ).value;
-  if (vt1 != "" && vt1 != null) {
-      setCookie("vt1", vt1, 30);
-  }
-  var vt2 = document.getElementById( "vt2" ).value;
-  if (vt2 != "" && vt2 != null) {
-      setCookie("vt2", vt2, 30);
-  }
-  var cccode = document.getElementById( "cccode" ).value;
-  if (cccode != "" && cccode != null) {
-      setCookie("cccode", cccode, 30);
-  }
-  var bthname = document.getElementById( "bthname" ).value;
-  if (bthname != "" && bthname != null) {
-      setCookie("bthname", bthname, 30);
-  }
-  var btnum = document.getElementById( "btnum" ).value;
-  if (btnum != "" && btnum != null) {
-      setCookie("btnum", btnum, 30);
-  }
-  var btname = document.getElementById( "btname" ).value;
-  if (btname != "" && btname != null) {
-      setCookie("btname", btname, 30);
-  }
-
-});
-
-
-
-$("#ok").click(function(){
-
-      var emailv = document.getElementById( "emailv").value;
-      var passwordv = document.getElementById( "passwordv" ).value;
-      if(emailv=="" || emailv==null || passwordv=="" || passwordv==null){
-        alert("Required filed missing");
-      }
-      else{
-        checkCookies();
-        $(".dialog-form").hide();
-      }
-
-});
-
-});
-</script>
+<script src="./ex1_script.js"></script>
 </head>
 <body>
 
@@ -189,7 +18,7 @@ $("#ok").click(function(){
     <fieldset>
       <form id="loginvalid">
     <h1>Log In</h1>
-      <h2>Email:<h2><br><input class="large" type="text" id="emailv" placeholder="example@uc3m.es" value="" autofocus required><br>
+      <h2>Email:</h2><br><input class="large" type="text" id="emailv" placeholder="example@uc3m.es" value="" autofocus required><br>
       <h2>Password:</h2><br><input class="large" id="passwordv" type="password" value="" required>
       <input class="button" id="ok" type="button" value="OK">
       </form>
@@ -216,7 +45,7 @@ $("#ok").click(function(){
 
   <form id="login">
   <div class="col-8 col-m-12">
-      User Name:<br><input class="large" type="text" id="user" placeholder="PopCorn15" value="" autofocus required><br>
+      User Name:<br><input class="large" type="text" id="user" placeholder="PopCorn15" value="" required><br>
       Password:<br><input class="large" id="password" type="password" value="" required>
   </div>
 
@@ -238,7 +67,7 @@ $("#ok").click(function(){
 
    <div class="col-4 col-m-6">
         Email:<br><input type="email" readonly id="email" placeholder="example@uc3m.es" value="" required><br>
-        Language:<br><select id="lang" data-placeholder="Choose a Language..." value="">
+        Language:<br><select id="lang" data-placeholder="Choose a Language...">
             <option value="" disabled selected hidden>Choose a Language...</option>
             <option value="AF">Afrikanns</option>
             <option value="AF">Afrikanns</option>
@@ -331,7 +160,7 @@ $("#ok").click(function(){
 
     <div class="col-8 col-m-12">
         Address:<br><input class="large" type="text" id="addr" placeholder="Avda. Universidad, 30. ZIP: 28911. Leganes, Madrid, Spain" value="" required><br>
-        Payment Method:<br><select class="large" id="pmethod" data-placeholder="Choose a payment method..." value="" required>
+        Payment Method:<br><select class="large" id="pmethod" data-placeholder="Choose a payment method..." required>
             <option value="" disabled selected hidden>Choose a payment method...</option>
             <option value="CC">Credit Card</option>
             <option value="PA">PayPal</option>
@@ -347,7 +176,7 @@ $("#ok").click(function(){
 
         <div class="hidden isPA">
             <p>
-              <a href="https://www.paypal.com/signin?country.x=US&locale.x=en_US"><image border="0" alt="Paypal" src="./images/paypal.png"></a>
+              <a href="https://www.paypal.com/signin?country.x=US&locale.x=en_US"><img alt="Paypal" src="./images/paypal.png"></a>
             </p>
         </div>
 
