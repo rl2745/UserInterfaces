@@ -8,44 +8,29 @@
 <link rel="stylesheet" href="./style/style.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-
-
-   var likesCount = 1230342;
-   var sharesCount = 3429;
-   document.getElementById("likesCount").innerHTML = likesCount;
-   document.getElementById("sharesCount").innerHTML = sharesCount;
-
-  $("#pmethod").change(function(){
-      var value = $("#pmethod option:selected").val();
-      var theDiv = $(".is" + value);
-
-      theDiv.slideDown();
-      theDiv.siblings('[class*=is]').slideUp(function() { $(this).addClass("hidden"); });
-  });
-
-  $("#counterLike").click(function(){
-      likesCount++;
-      document.getElementById("likesCount").innerHTML = likesCount;
-  });
-
-  $("#counterShare").click(function(){
-      sharesCount++;
-      document.getElementById("sharesCount").innerHTML = sharesCount;
-  });
-
-});
-</script>
-
-
-
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js" type="text/javascript"></script>
+<script src="./ex2_script.js"></script>
 
 </head>
 
 
 
 <body>
+
+
+<div class="dialog-form" title="validation">
+  <div class="col-8 col-m-12">
+    <fieldset>
+      <form id="loginvalid">
+    <h1>Log In</h1>
+      <h2>Email:</h2><br><input class="large" type="text" id="emailv" placeholder="example@uc3m.es" value="" autofocus required><br>
+      <h2>Password:</h2><br><input class="large" id="passwordv" type="password" value="" required>
+      <input class="loginButton" id="ok" type="button" value="OK">
+      </form>
+    </fieldset>
+    </div>
+
+</div>
 
 
 	<ul class="topnav">
@@ -69,15 +54,15 @@ $(document).ready(function(){
     <form action="/action_page.php">
     <div class="col-2 col-m-4">
 
-    	<br><img class="icon" src="./images/like.png" alt="like" id="counterLike">
+    	<img class="icon" src="./images/like.png" alt="like" id="counterLike">
          <p id="likesCount"></p>
             <p> Likes</p>
 
-    	<br><img class="icon" src="./images/share.png" alt="share" id="counterShare">
+    	<img class="icon" src="./images/share.png" alt="share" id="counterShare">
          <p id="sharesCount"></p>
             <p> Shares</p>
 
-        <br><br>Description:<p>Bourne (Matt Damon) catches up to Desh (Joey Ansah) who is chasing Nicky (Julia Stiles) and the two fight to the death.</p><br>
+        <br>Description:<p>Bourne (Matt Damon) catches up to Desh (Joey Ansah) who is chasing Nicky (Julia Stiles) and the two fight to the death.</p>
 
     </div>
 
@@ -100,7 +85,7 @@ $(document).ready(function(){
 
     <form action="/action_page.php">
     <div class="col-2 col-m-4">
-        <div class="vid-with-text">
+        <div class="vid-with-text" draggable="true">
    			<img width="240" height="192" src="https://static.highsnobiety.com/wp-content/uploads/2016/02/08123852/jason-bourne-first-look-trailer-00-0.jpg" alt="BourneVid" />
     		<p>Desh Makes a Kill <img class="info" src="./images/plusIcon.png" alt="info"> </p>
 		</div>
@@ -108,15 +93,18 @@ $(document).ready(function(){
     </div>
 
 	 <div class="col-2 col-m-4">
-    	<div class="vid-with-text">
+    	<div class="vid-with-text" draggable="true">
    			<img width="240" height="192" src="https://ichef-1.bbci.co.uk/news/660/cpsprodpb/16928/production/_89365429_2465_fpt_00050rv2_crop.jpg" alt="BourneVid" />
-    		<p>Firing Grounds <img class="info" src="./images/plusIcon.png" alt="info"> </p>
+    		<p>Firing Grounds <img class="info" src="./images/plusIcon.png" alt="info" id="FiringGroundsOpener"> </p>
+            <div id="FiringGroundsDesc">
+               <p>Bourne (Matt Damon) pursues Desh (Joey Ansah), but Desh has a deadly surprise up his sleeve.</p>
+            </div>
 		</div>
 
 	  </div>
 
 	  <div class="col-2 col-m-4">
-		<div class="vid-with-text">
+		<div class="vid-with-text" draggable="true">
    			<img width="240" height="192" src="https://s.yimg.com/ny/api/res/1.2/JROTP4ypmUy8vXQ1rz2YNg--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/digital_trends_973/723a913796bd557efbf682b3b5869d17" alt="BourneVid" />
     		<p>Running From the Enemy <img class="info" src="./images/plusIcon.png"  alt="info"> </p>
 		</div>
