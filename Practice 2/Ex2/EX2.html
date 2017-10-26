@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PE01-EX2-UI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./style/style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("#pmethod").change(function(){
+      var value = $("#pmethod option:selected").val();
+      var theDiv = $(".is" + value);
+
+      theDiv.slideDown();
+      theDiv.siblings('[class*=is]').slideUp(function() { $(this).addClass("hidden"); });
+  });
+
+  $("#c").click(function(){
+    $('[class*=is]').slideUp(function() { $(this).addClass("hidden"); });
+  });
+
+});
+</script>
+
+
+
+
+</head>
+
+
+
+<body>
+
+
+	<ul class="topnav">
+  <li><a class="active" href="#home"> <img class="logo" src="./images/logo2.png" alt="R_logo"> Santiago's Account</a></li>
+  <li><img class="pic" src="./images/santiago-cabrera-dexter.jpg" alt="pic"></li>
+  <li><a class="option" href="#news">Home</a></li>
+  <li><a class="option" href="#contact">Movies</a></li>
+  <li><a class="option" href="#about">TV Shows</a></li>
+  
+
+</ul>
+
+    <div class="row">
+
+
+    <div class="col-4 col-m-12">
+        <h2>The Bourne Ultimatum</h2>
+    </div>
+
+
+    <form action="/action_page.php">
+    <div class="col-2 col-m-4">
+
+    	<br><img class="icon" src="./images/like.png" alt="like"> 1,230,342 Likes<br>
+    	<br><img class="icon" src="./images/share.png" alt="share"> 3,429 Shares<br>
+        <br><br>Description:<p>Bourne (Matt Damon) catches up to Desh (Joey Ansah) who is chasing Nicky (Julia Stiles) and the two fight to the death.</p><br>
+
+    </div>
+
+    <div class="col-6 col-m-8">
+    	<iframe width="560" height="315" src="https://www.youtube.com/embed/uLt7lXDCHQ0" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+   </form>
+
+
+	<hr>
+
+
+    <div class="col-4 col-m-12">
+
+       <h2>Other Videos</h2>
+
+    </div>
+
+
+    <form action="/action_page.php">
+    <div class="col-2 col-m-4">
+        <div class="vid-with-text">
+   			<img width="240" height="192" src="https://static.highsnobiety.com/wp-content/uploads/2016/02/08123852/jason-bourne-first-look-trailer-00-0.jpg" alt="BourneVid" />
+    		<p>Desh Makes a Kill <img class="info" src="./images/plusIcon.png" alt="info"> </p>
+		</div>
+    	
+    </div>
+
+	 <div class="col-2 col-m-4">
+    	<div class="vid-with-text">
+   			<img width="240" height="192" src="https://ichef-1.bbci.co.uk/news/660/cpsprodpb/16928/production/_89365429_2465_fpt_00050rv2_crop.jpg" alt="BourneVid" />
+    		<p>Firing Grounds <img class="info" src="./images/plusIcon.png" alt="info"> </p>
+		</div>
+
+	  </div>
+
+	  <div class="col-2 col-m-4">
+		<div class="vid-with-text">
+   			<img width="240" height="192" src="https://s.yimg.com/ny/api/res/1.2/JROTP4ypmUy8vXQ1rz2YNg--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en-US/homerun/digital_trends_973/723a913796bd557efbf682b3b5869d17" alt="BourneVid" />
+    		<p>Running From the Enemy <img class="info" src="./images/plusIcon.png"  alt="info"> </p>
+		</div>
+
+	  </div>
+
+    </form>
+    
+  <hr>
+
+    </div>
+    <div class="footer">
+      <br>
+        <p class="l"><a class="link" href="#news">Copyright</a></p><p class="l">|</p>
+        <p class="l"><a class="link" href="#news">About Us</a></p><p class="l">|</p>
+        <p class="l"><a class="link" href="#news">Contact</a></p>
+        <br><br>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-android"></a>
+    </div>
+
+
+</body>
+</html>
